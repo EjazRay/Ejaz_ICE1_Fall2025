@@ -15,6 +15,8 @@ import java.util.Scanner;
  * 
  * Modifier: Ejaz Rayman
  * Student Number: 991809346
+ * 
+ * 
  */
 public class CardTrick {
     
@@ -50,7 +52,7 @@ public class CardTrick {
         }
         
         //prompts the user to eneter a value
-        System.out.println("Enter the card value between 1 and 13");
+        System.out.print("Enter the card value between 1 and 13 :");
         
         // saves value to this variable below 
         int userValue = inp.nextInt(); 
@@ -58,15 +60,15 @@ public class CardTrick {
         
         
         //Prompt user for suit
-        System.out.println("Enter the card suit ");
+        System.out.print("Enter the card suit (0-3 where 0=Hearts, 1=Diamonds 2=Clubs 3=Spades): ");
         
         // saves value to variable 
-        String userSuit = inp.nextLine();
+        int userSuit = inp.nextInt();
         
         // create Card object for user and sets the value and suit
         Card userC = new Card();
         userC.setValue(userValue);
-        userC.setSuit(userSuit);
+        userC.setSuit(Card.SUITS[userSuit]);
         
         //insert code to ask the user for Card value and suit, create their card
         // and search magicHand here
@@ -81,7 +83,7 @@ public class CardTrick {
             if(userC.getSuit().equalsIgnoreCase(c.getSuit()) && userC.getValue() == c.getValue()){
                 //if the condition is true, it changes the boolean flag to true
                 isFound = true;
-                System.out.println("Its a match"); // message is printed 
+                System.out.println("Your card is in the magic hand "); // message is printed 
                 break; // break from the for loop 
         }// end of if statement 
             
@@ -90,7 +92,7 @@ public class CardTrick {
         
         // if there is no match the flag remains false and the message prints 
         if(!isFound){
-                System.out.println("Better luck next time");
+                System.out.println("Sorry, your card is not in the magic hand");
             }
         //Then report the result here
         // add one luckcard hard code 2,clubs
