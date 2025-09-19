@@ -73,7 +73,7 @@ public class CardTrick {
 
         Card luckyCard = new Card();
         luckyCard.setValue(6);
-        luckCard.setSuit("Diamonds");
+        luckyCard.setSuit("Diamonds");
         
         
         //insert code to ask the user for Card value and suit, create their card
