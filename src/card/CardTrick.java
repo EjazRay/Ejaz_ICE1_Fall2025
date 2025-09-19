@@ -52,6 +52,7 @@ public class CardTrick {
         }
         
         //prompts the user to eneter a value
+        /* removed the user input so we check the lucky card instead 
         System.out.print("Enter the card value between 1 and 13 :");
         
         // saves value to this variable below 
@@ -68,7 +69,12 @@ public class CardTrick {
         // create Card object for user and sets the value and suit
         Card userC = new Card();
         userC.setValue(userValue);
-        userC.setSuit(Card.SUITS[userSuit]);
+        userC.setSuit(Card.SUITS[userSuit]);*/
+
+        Card luckyCard = new Card();
+        luckyCard.setValue(6);
+        luckCard.setSuit("Diamonds");
+        
         
         //insert code to ask the user for Card value and suit, create their card
         // and search magicHand here
@@ -80,7 +86,7 @@ public class CardTrick {
         for(Card c:magicHand){
             
             // check condition for the user suit and value. 
-            if(userC.getSuit().equalsIgnoreCase(c.getSuit()) && userC.getValue() == c.getValue()){
+            if(luckyCard.getSuit().equalsIgnoreCase(c.getSuit()) && luckyCard.getValue() == c.getValue()){
                 //if the condition is true, it changes the boolean flag to true
                 isFound = true;
                 System.out.println("Your card is in the magic hand "); // message is printed 
