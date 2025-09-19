@@ -60,7 +60,7 @@ public class CardTrick {
         
         
         //Prompt user for suit
-        System.out.print("Enter the card suit (0-3 where 0=Hearts, 1=Diamonds 2=Clubs 3=Spades): ");
+        System.out.print("Enter the card suit (0-3 where 0=Hearts, 1=Diamonds 2=Spades 3=Clubs): ");
         
         // saves value to variable 
         int userSuit = inp.nextInt();
